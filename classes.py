@@ -11,6 +11,7 @@ class Street(object):
 	def __init__(self, space):
 		self.space = space
 		self.s_taken = 0
+		self.n_cars = 0
 
 	def get_space(self):
 		return self.space
@@ -18,9 +19,16 @@ class Street(object):
 	def get_s_taken(self):
 		return self.s_taken
 
+	def get_n_cars(self):
+		return self.n_cars
+
+	def update_n_cars(self, n):
+		self.n_cars += n
+		#print(str(n) + ' car was added')
+
 	def update_s_taken(self, space):
 		self.s_taken += space
-		print(str(space)+' meters have been taken')
+		#print(str(space)+' meters have been taken')
 
 
 
